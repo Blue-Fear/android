@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TTinActi">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textSize="20sp"
+        android:textColor="@android:color/holo_red_light"
+        android:gravity="center"
+        android:background="@android:color/holo_orange_light"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="@string/ten"
+            />
+        <EditText
+            android:id="@+id/edt_ten"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/ten_hint"
+            android:layout_weight="5"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+
+            android:text="@string/cmnd" />
+        <EditText
+            android:id="@+id/edt_cmnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/cmnd_hint"
+            android:layout_weight="5"
+            android:inputType="number"
+            />
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bang"
+        android:background="@android:color/holo_green_light"
+        android:gravity="center"
+        />
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <RadioButton
+            android:id="@+id/rbt_dh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dh"/>
+        <RadioButton
+            android:id="@+id/rbt_cd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cd"/>
+        <RadioButton
+            android:id="@+id/rbt_tc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tc"/>
+    </RadioGroup>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sothich"
+        android:background="@android:color/holo_green_light"
+        android:gravity="center"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <CheckBox
+            android:id="@+id/cb_nhac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nhac"/>
+        <CheckBox
+            android:id="@+id/cb_sach"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sach"/>
+        <CheckBox
+            android:id="@+id/cb_game"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/game"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bosung"
+        android:background="@android:color/holo_green_light"
+        android:gravity="center"/>
+    <EditText
+        android:id="@+id/edt_ttbs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/ttbs"/>
+    <Button
+        android:id="@+id/btn_gui"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gui"
+        android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </LinearLayout>
+
+</LinearLayout>

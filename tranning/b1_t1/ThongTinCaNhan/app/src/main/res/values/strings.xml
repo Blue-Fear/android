@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Thông Tin Cá Nhân</string>
+    <string name="ten">Họ Tên</string>
+    <string name="cmnd">CMND</string>
+    <string name="ten_hint">Tên Làm >=3 Kí Tự</string>
+    <string name="cmnd_hint">Nhập Đúng 9 Chữ Số</string>
+    <string name="bang">Bằng Cấp</string>
+    <string name="sothich">Sở Thích</string>
+    <string name="bosung">Thông Tin Bổ Sung</string>
+    <string name="ttbs">Nhập thông tin bổ sung - có thể để trống</string>
+    <string name="dh">Đại Học</string>
+    <string name="cd">Cao Đẳng</string>
+    <string name="tc">Trung Cấp</string>
+    <string name="nhac">Nghe Nhạc</string>
+    <string name="sach">Đọc Sách</string>
+    <string name="game">Chơi Game</string>
+    <string name="gui">Gửi Thông Tin</string>
+</resources>
+

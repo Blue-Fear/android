@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Format</string>
+    <string name="text">Nhập String Cần Format</string>
+    <string name="cb_br">Background</string>
+    <string name="cb_cl">Color</string>
+    <string name="cb_cent">Center</string>
+    <string name="btn_result">SHOW RESULT</string>
+</resources>

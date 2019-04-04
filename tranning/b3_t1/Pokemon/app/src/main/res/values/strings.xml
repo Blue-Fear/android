@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Pokemon</string>
+    <string name="name">Pick Your Pokemon</string>
+    <string name="pika">Pikachu</string>
+    <string name="ech">Ếch Kì Diệu</string>
+    <string name="vit">Vịt Ngốc Nghếch</string>
+    <string name="coco">Bé Sâu</string>
+</resources>
