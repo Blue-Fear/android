@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">TracNghiem</string>
+    <string name="str_spi">Level 1 - Spinner</string>
+    <string name="str_swi">Level 2 - Switch</string>
+    <string name="str_tog">Level 3 - Toggle</string>
+    <string name="str_che">Level 4 - CheckBox</string>
+    <string name="str_rad">Level 5 - RadioButton</string>
+    <string name="sp_cau1">Việt Nam có bao nhiêu tỉnh thành</string>
+    <string name="sp_cau2">Việt Nam có bao nhiêu dân tộc</string>
+    <string name="sp_cau3">Có bao nhiêu hành tinh trong hệ mặt trời</string>
+    <string name="st_truoc">Back</string>
+    <string name="st_sau">Next</string>
+    <string-array name="spin1">
+        <item name="value1">62</item>
+        <item name="value2">63</item>
+        <item name="value3">64</item>
+        <item name="value4">65</item>
+    </string-array>
+    <string-array name="spin2">
+        <item name="value1">52</item>
+        <item name="value2">53</item>
+        <item name="value3">54</item>
+        <item name="value4">55</item>
+    </string-array>
+    <string-array name="spin3">
+        <item name="value1">6</item>
+        <item name="value2">7</item>
+        <item name="value3">8</item>
+        <item name="value4">9</item>
+    </string-array>
+
+    <string name="sw_cau1">Ốc sên có thể thở bằng chân?</string>
+    <string name="sw_cau2">Người trưởng thành có ít xương hơn trẻ sơ sinh?</string>
+    <string name="sw_cau3">Loài chim có nguồn gốc từ khủng long?</string>
+    <string name="tog_cau1">Không thể vừa ăn và thở</string>
+    <string name="tog_cau2">Electron nhỏ hơn nguyên tử</string>
+    <string name="tog_cau3">Laser hoạt động bằng cách tập trung vào sóng âm thanh</string>
+</resources>
