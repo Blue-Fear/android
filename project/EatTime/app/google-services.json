@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "472348250864",
+    "firebase_url": "https://eattime-a5872.firebaseio.com",
+    "project_id": "eattime-a5872",
+    "storage_bucket": "eattime-a5872.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:472348250864:android:7df6f4d37ad1352e",
+        "android_client_info": {
+          "package_name": "com.example.eattime"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "472348250864-3pnkmoj9vldjedtud6r8v5v7rf47v421.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.eattime",
+            "certificate_hash": "1333a9b3451d2679aca978320cf181080430b379"
+          }
+        },
+        {
+          "client_id": "472348250864-odailshnhfme7i81d2vcs54l84fhpal4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5rXMLql02OxhrTBGBPUxO7sdDHRb30ng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "472348250864-odailshnhfme7i81d2vcs54l84fhpal4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
