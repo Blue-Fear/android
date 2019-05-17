@@ -14,6 +14,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.eattime.Adapter.MyRestaurantAdater;
+import com.example.eattime.Common.Common;
 import com.example.eattime.Common.SpacesItemDecoration;
 import com.example.eattime.Interface.IAllRestaurantLoadListener;
 import com.example.eattime.Interface.IBranchLoadListener;
@@ -132,10 +133,14 @@ public class Booking1Fragment extends Fragment implements IAllRestaurantLoadList
 
     private void loadBranch(String cityName) {
         dialog.show();
+
+        Common.city = cityName;
+
         branchRef = FirebaseFirestore.getInstance()
                 .collection("Restaurant")
                 .document(cityName)
                 .collection("Branch");
+
         branchRef.get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
@@ -143,7 +148,11 @@ public class Booking1Fragment extends Fragment implements IAllRestaurantLoadList
                 if (task.isSuccessful())
                 {
                     for (QueryDocumentSnapshot documentSnapshot:task.getResult())
-                    list.add(documentSnapshot.toObject(Restaurant.class));
+                    {
+                        Restaurant restaurant = documentSnapshot.toObject(Restaurant.class);
+                        restaurant.setResId(documentSnapshot.getId());
+                        list.add(restaurant);
+                    }
                     iBranchLoadListener.onAllBranchLoadSuccess(list);
                 }
             }

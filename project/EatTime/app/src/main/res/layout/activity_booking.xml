@@ -24,7 +24,7 @@
         app:sv_doneStepMarkColor="@android:color/white"
         />
 
-    <android.support.v4.view.ViewPager
+    <com.example.eattime.Common.NonSwipeViewPager
         android:id="@+id/view_pager"
         android:layout_below="@+id/step_view"
         android:layout_width="match_parent"

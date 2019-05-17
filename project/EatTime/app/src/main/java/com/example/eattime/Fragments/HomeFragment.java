@@ -18,10 +18,12 @@ import com.example.eattime.Adapter.HomeSliderAdapter;
 import com.example.eattime.Adapter.LookbookAdapter;
 import com.example.eattime.BookingActivity;
 import com.example.eattime.Common.Common;
+import com.example.eattime.DessertActivity;
+import com.example.eattime.DrinkActivity;
+import com.example.eattime.FoodActivity;
 import com.example.eattime.Interface.IBannerLoadListener;
 import com.example.eattime.Interface.ILookbookLoadListener;
 import com.example.eattime.Model.Banner;
-import com.example.eattime.Model.User;
 import com.example.eattime.R;
 import com.example.eattime.Service.PicassoImageLoadingService;
 import com.facebook.accountkit.AccountKit;
@@ -56,10 +58,27 @@ public class HomeFragment extends Fragment implements IBannerLoadListener, ILook
     Slider banner_slider;
     @BindView(R.id.recycler_look_book)
     RecyclerView recycle_look_book;
+
     @OnClick(R.id.card_view_booking)
         void booking()
     {
         startActivity(new Intent(getActivity(), BookingActivity.class));
+    }
+
+    @OnClick(R.id.card_view_food)
+        void food()
+    {
+        startActivity(new Intent(getActivity(), FoodActivity.class));
+    }
+    @OnClick(R.id.card_view_drink)
+        void drink()
+    {
+        startActivity(new Intent(getActivity(), DrinkActivity.class));
+    }
+    @OnClick(R.id.card_view_desert)
+        void dessert()
+    {
+        startActivity(new Intent(getActivity(), DessertActivity.class));
     }
 
     // Firestore
