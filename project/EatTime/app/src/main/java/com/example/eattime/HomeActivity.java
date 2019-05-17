@@ -72,8 +72,15 @@ public class HomeActivity extends AppCompatActivity {
                                             {
                                                 DocumentSnapshot userSnapShot = task.getResult();
                                                 if (!userSnapShot.exists())
+                                                {
                                                     showUpdateDialog(account.getPhoneNumber().toString());
-
+                                                }
+                                                else
+                                                {
+                                                   // Neu user da dang nhap roi
+                                                   Common.currentUser = userSnapShot.toObject(User.class);
+                                                   bottomNavigationView.setSelectedItemId(R.id.action_home);
+                                                }
                                             }
                                         }
                                     });
@@ -101,7 +108,7 @@ public class HomeActivity extends AppCompatActivity {
                 return loadFragment(fragment);
             }
         });
-        bottomNavigationView.setSelectedItemId(R.id.action_home);
+
 
     }
 
@@ -130,7 +137,7 @@ public class HomeActivity extends AppCompatActivity {
         btn_update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                User user = new User(edt_name.getText().toString()
+                final User user = new User(edt_name.getText().toString()
                 ,edt_address.getText().toString(),phoneNumber);
                 useRef.document(phoneNumber)
                         .set(user)
@@ -138,6 +145,10 @@ public class HomeActivity extends AppCompatActivity {
                             @Override
                             public void onSuccess(Void aVoid) {
                                 bottomSheetDialog.dismiss();
+                                // Khi user da cap nhat thong tin thi cung cap home view
+                                Common.currentUser = user;
+                                bottomNavigationView.setSelectedItemId(R.id.action_home);
+
                                 Toast.makeText(HomeActivity.this, "Thank You", Toast.LENGTH_SHORT).show();
                             }
                         }).addOnFailureListener(new OnFailureListener() {

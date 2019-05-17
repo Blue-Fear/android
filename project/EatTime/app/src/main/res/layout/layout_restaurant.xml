@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="6dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_restaurant_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nha Hang #1"
+            android:textSize="20dp"
+            android:fontFamily="@font/pusia"
+            android:gravity="center_horizontal"/>
+        <TextView
+            android:id="@+id/txt_restaurant_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dia Chi cua nha hang #1"
+            android:textSize="18dp"
+            android:textStyle="italic"
+            android:fontFamily="@font/pusia"
+            android:gravity="center_horizontal"/>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
