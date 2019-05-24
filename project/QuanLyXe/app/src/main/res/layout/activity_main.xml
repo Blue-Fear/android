@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="cursive"
+        android:gravity="center"
+        android:text="Welcome!"
+        android:textSize="26sp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:src="@drawable/xe_du_lich" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnKhachHang"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:drawableTop="@mipmap/icon_khachhang"
+            android:text="Khách Hàng" />
+
+        <Button
+            android:id="@+id/btnXe"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:drawableTop="@mipmap/car1"
+            android:text="Xe"
+            android:visibility="visible" />
+
+
+
+</LinearLayout>
+</LinearLayout>

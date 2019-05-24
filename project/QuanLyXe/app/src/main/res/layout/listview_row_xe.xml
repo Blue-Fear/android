@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="10"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="5">
+
+        <ImageView
+
+            android:id="@+id/imgxeAvartar"
+            android:layout_width="match_parent"
+            android:layout_height="150dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="5"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txtTenXe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tên Xe"
+            tools:text="Ware RSX" />
+
+        <TextView
+            android:id="@+id/txtXuatXu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Xuất xứ"
+            tools:text="Quan 9" />
+
+        <Button
+            android:text="Sửa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnxeSua" />
+
+        <Button
+            android:text="Xóa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnxeXoa" />
+    </LinearLayout>
+
+</LinearLayout>
