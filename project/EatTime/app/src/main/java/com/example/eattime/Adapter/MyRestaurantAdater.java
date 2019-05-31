@@ -63,6 +63,7 @@ public class MyRestaurantAdater extends RecyclerView.Adapter<MyRestaurantAdater.
                 Intent intent = new Intent(Common.KEY_ENABLE_BUTTON_NEXT);
                 //can phai gui restaurant object den intent nen phai implement Parcelable trong restaurant obj
                 intent.putExtra(Common.KEY_RESTAURANT_STORE, restaurantList.get(pos));
+                intent.putExtra(Common.KEY_STEP,1);
                 localBroadcastManager.sendBroadcast(intent);
             }
         });

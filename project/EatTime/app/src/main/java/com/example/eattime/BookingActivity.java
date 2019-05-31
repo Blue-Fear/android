@@ -73,13 +73,26 @@ public class BookingActivity extends AppCompatActivity {
                 if (Common.currentRestaurant != null)
                     loadTable(Common.currentRestaurant.getResId());
             }
+            else if (Common.step == 2)
+            {
+                if (Common.currentTable != null)
+                    loadTimeOfTable(Common.currentTable.getTableId());
+            }
             viewPager.setCurrentItem(Common.step);
         }
+    }
+
+    private void loadTimeOfTable(String tableId) {
+        //gui local broadcast den fragment buoc 3
+        Intent intent = new Intent(Common.KEY_TIME_SLOT);
+        localBroadcastManager.sendBroadcast(intent);
+
     }
 
     // Load Ban tu firebase
     private void loadTable(String resId) {
         dialog.show();
+
         if (!TextUtils.isEmpty(Common.city))
         {
             ///Restaurant/Quan 9/Branch/26ZXrBd9gZdZweTPjr6G/Tables
@@ -90,8 +103,7 @@ public class BookingActivity extends AppCompatActivity {
                     .document(resId)
                     .collection("Tables");
 
-            tableRef.get()
-                    .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            tableRef.get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                         @Override
                         public void onComplete(@NonNull Task<QuerySnapshot> task) {
                             // Tao list table o model
@@ -126,7 +138,12 @@ public class BookingActivity extends AppCompatActivity {
     private BroadcastReceiver buttonNextReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            Common.currentRestaurant = intent.getParcelableExtra(Common.KEY_RESTAURANT_STORE);
+
+            int step = intent.getIntExtra(Common.KEY_STEP,0);
+            if (step == 1)
+                Common.currentRestaurant = intent.getParcelableExtra(Common.KEY_RESTAURANT_STORE);
+            else if (step == 2)
+                Common.currentTable = intent.getParcelableExtra(Common.KEY_TABLE_SELECTED);
             btn_next_step.setEnabled(true);
             setColorButton();
         }
@@ -170,6 +187,9 @@ public class BookingActivity extends AppCompatActivity {
                     btn_back_step.setEnabled(false);
                 else
                     btn_back_step.setEnabled(true);
+
+                // Set disable button next
+                btn_next_step.setEnabled(false);
                 setColorButton();
             }
 
